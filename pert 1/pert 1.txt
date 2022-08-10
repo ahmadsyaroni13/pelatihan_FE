@@ -1,0 +1,90 @@
+=============================================================================================================================
+
+Dalam javascript ada 2 tipe data :
+- Primitif
+- Non Primitif
+
+Primitif :
+- Boolean ( TRUE / FALSE )
+- Number ( 5, 10, 20 )
+- String ( "Ayam", "Sapi" )
+- Null >> Kosong, dan kosongnya dipertegas dengan mendeklarasi kalau valuenya benar2 kosong
+- Undefined >> Kosong, tapi benar benar kosong
+- NaN >> bentuknya number tetapi tidak memiliki value
+- etc...
+
+Non Primitif / Reference
+- Object
+- Array
+
+=============================================================================================================================
+
+Cara untuk mendeklarasi variable ada 3 tipe :
+- Const >> Tipe variable yang tidak dapat diubah isinya
+- Let >> Tipe variable yang dapat diubah isinya
+- Var ??
+
+=============================================================================================================================
+
+CONSOLE LOG
+- " " >> CONCAT harus pakai +
+- ' ' >> CONCAT harus pakai +
+- ` ` >> CONCAT bisa pakai ${}
+- variable
+
+=============================================================================================================================
+
+IF ?? Sebuah logika yang bisa mendeteksi benar salah suatu argument
+
+IF memiliki pembatas yang hasilnya nantinya berupa FALSY atau TRUTHY
+- == >> SAMA DENGAN
+- != >> TIDAK SAMA DENGAN
+- < >> LEBIH KECIL DARI
+- <= >> LEBIH KECIL SAMA DENGAN
+- > >> LEBIH BESAR DARI
+- >= >> LEBIH BESAR SAMA DENGAN
+
+IF memiliki separator ada 2
+- && >> DAN
+- || >> ATAU
+
+RULES
+- TRUE && TRUE >> TRUE
+- TRUE && FALSE >> FALSE
+- TRUE || TRUE >> TRUE
+- TRUE || FALSE >> TRUE
+
+STUDI KASUS
+1. MEMBUAT MESIN UNTUK MENDETEKSI ANGKA BILANGAN GANJIL ATAU GENAP
+
+const angka = 5
+
+if ( angka < 1 ) {
+  console.log(`ERROR`);
+} else if ( angka % 2 == 0 ) {
+  console.log(`${angka} merupakan bilangan genap`);
+} else if ( angka % 2 == 1 ) {
+  console.log(`${angka} merupakan bilangan ganjil`);
+} 
+
+2. MEMBUAT MESIN UNTUK MENDETEKSI JUMLAH HURUF DI DALAM KATA GANJIL ATAU GENAP
+
+const kata = "gajah";
+
+if (kata.length % 2 == 0) {
+  console.log(`kata ${kata} memiliki ${kata.length} huruf oleh karena itu, hasilnya adalah GENAP`);
+}
+
+if (kata.length % 2 == 1) {
+  console.log(`kata ${kata} memiliki ${kata.length} huruf oleh karena itu, hasilnya adalah GANJIL`);
+}
+
+3. HATI HATI
+
+const angka = 5
+
+if (angka > 1) {
+  console.log(`ANGKA LEBIH BESAR DARI 1`);
+} else if (angka > 2) {
+  console.log(`ANGKA LEBIH BESAR DARI 2`);
+}

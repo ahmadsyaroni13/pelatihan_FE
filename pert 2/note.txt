@@ -1,0 +1,205 @@
+=============================================================================================================================
+
+BuildIn function >> Math 
+- Math.random() >> random >> console.log(Math.random() * 100);
+- Math.ceil() >> pembulatan keatas >> console.log(Math.ceil(6.99));
+- Math.floor() >> pembulatan kebawah >> console.log(Math.floor(100.95));
+- Math.round() >> average >> console.log(Math.round(0.49999));
+
+=============================================================================================================================
+
+Menambah existing variable dan CONCAT string
+
+UNTUK NUMBER :
+
+let angka = 20
+angka = angka + 50 + angka
+angka = angka + 20
+angka = angka * 2
+
+console.log(angka);
+
+UNTUK STRING :
+
+let kata = "ayam"
+kata = kata + "bakar" + " enak"
+
+console.log(kata);
+
+=============================================================================================================================
+
+IF bisa digunakan untuk mengganti variable apabila vairablenya adalah let atau var
+
+const score = -50;
+const nama = "Ali";
+let peringkat = "";
+
+if (score > 90 && score <= 100) {
+  peringkat = "Sangat Bagus"
+} else if (score > 65 && score <= 90) {
+  peringkat = "Cukup"
+} else if (score >= 0 && score <= 65) {
+  peringkat = "Remidial"
+} else {
+  peringkat = "Error"
+}
+
+if (peringkat == "Sangat Bagus" || peringkat == "Cukup") {
+  console.log(`${nama} lulus ujian dengan peringkat ${peringkat}`);
+} else if (peringkat == "Remidial") {
+  console.log(`${nama} tidak lulus ujian maka perlu diulang`);
+} else {
+  console.log(`ERROR`);
+}
+
+=============================================================================================================================
+
+NESTED IF
+
+CASE 1 ? BUAT PROGRAM UNTUK MENGKATEGORIKAN UMUR,
+19 KEBAWAH ? REMAJA
+10 KEBAWAH ? ANAK2
+65 KEATAS ? LANSIA
+18 KEATAS ? DEWASA
+
+const umur = 80
+if (umur < 19) {
+  if (umur < 10) {
+    console.log(`ANAK - ANAK`);
+  } else {
+    console.log(`REMAJA`);
+  }
+} else {
+  if (umur > 65) {
+    console.log(`LANSIA`);
+  } else {
+    console.log(`DEWASA`);
+  }
+}
+
+CASE 2 ? BUAT PROGRAM CUSTOM UNTUK TOKO ONLINE DIMANA ADA KODE BAJU DAN MERKBAJU SERTA HARGA
+// Kodebaju ada 3, yaitu 1, 2, dan 3
+const kodebaju = 3
+
+// Merkbaju ada 3, yaitu IMP, PRADA, GUCCI
+const merkbaju = 'imp'
+
+// Harga
+let harga = 0
+
+if (kodebaju == 1) {
+  if (merkbaju.toUpperCase() == 'IMP') {
+    harga = 5000
+  } else if (merkbaju.toUpperCase() == 'PRADA') {
+    harga = 10000
+  } else if (merkbaju.toUpperCase() == 'GUCCI') {
+    harga = 20000
+  } else {
+    console.log(`ERROR`);
+  }
+} else if (kodebaju == 2) { // TRUE
+  if (merkbaju.toUpperCase() == 'IMP') { // TRUE
+    harga = 6000
+  } else if (merkbaju.toUpperCase() == 'PRADA') {
+    harga = 12000
+  } else if (merkbaju.toUpperCase() == 'GUCCI') {
+    harga = 24000
+  } else {
+    console.log(`ERROR`);
+  }
+} else if (kodebaju == 3) {
+  if (merkbaju.toUpperCase() == 'IMP') {
+    harga = 7500
+  } else if (merkbaju.toUpperCase() == 'PRADA') {
+    harga = 15000
+  } else if (merkbaju.toUpperCase() == 'GUCCI') {
+    harga = 30000
+  } else {
+    console.log(`ERROR`);
+  }
+} else {
+  console.log(`ERROR`);
+}
+
+const qty = 5
+console.log(`Ali membeli ${qty} baju dengan merk ${merkbaju.toUpperCase()} dan kode baju ${kodebaju} dengan total harga ${harga*qty}`);
+
+=============================================================================================================================
+
+SWITCH CASE ?
+Alternatif dari IF
+
+const dadu = Math.ceil(Math.random() * 6)
+
+switch (dadu) {
+  case 1:
+    console.log(`Dadu anda bernilai 1, maka anda tidak dapat JACKPOT`);
+  break;
+  case 2:
+    console.log(`Dadu anda bernilai 2, maka anda tidak dapat JACKPOT`);
+  break;
+  case 3:
+    console.log(`Dadu anda bernilai 3, maka anda tidak dapat JACKPOT`);
+  break;
+  case 4:
+    console.log(`Dadu anda bernilai 4, maka anda tidak dapat JACKPOT`);
+  break;
+  case 5:
+    console.log(`Dadu anda bernilai 5, maka anda tidak dapat JACKPOT`);
+  break;
+  case 6:
+    console.log(`Dadu anda bernilai 6, maka anda dapat JACKPOT`);
+  break;
+}
+
+CASE 1 ? BUAT PROGRAM UNTUK MENGHITUNG JUMLAH NILAI DARI LEMBAR JAWABAN ADA 4 SOAL, MASING2 SOAL SCORENYA 25 KALAU BENAR
+
+const kunciJawaban1 = "A";
+const kunciJawaban2 = "A";
+const kunciJawaban3 = "A";
+const kunciJawaban4 = "C";
+
+const jawaban1 = "D";
+const jawaban2 = "D";
+const jawaban3 = "D";
+const jawaban4 = "D";
+
+let nilai = 0
+
+switch (jawaban1) {
+  case kunciJawaban1:
+    nilai = nilai + 25
+  break;
+  default:
+    console.log(`Jawaban anda Salah`);
+  break;
+}
+
+switch (jawaban2) {
+  case kunciJawaban2:
+    nilai = nilai + 25
+  break;
+  default:
+    console.log(`Jawaban anda Salah`);
+  break;
+}
+
+switch (jawaban3) {
+  case kunciJawaban3:
+    nilai = nilai + 25
+  break;
+  default:
+    console.log(`Jawaban anda Salah`);
+  break;
+}
+
+switch (jawaban4) {
+  case kunciJawaban4:
+    nilai = nilai + 25
+  break;
+  default:
+    console.log(`Jawaban anda Salah`);
+  break;
+}
+
+console.log(`Nilai anda adalah ${nilai}`);
