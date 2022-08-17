@@ -1,0 +1,88 @@
+========= INDEXING =========
+
+const kata = "jerapah";
+console.log(kata[1]); // indexing dalam javascript, selalu dimulai dari 0
+
+const hurufKeLima = kata[4];
+console.log(hurufKeLima);
+
+========= INCREMENT & DECREMENT =========
+
+1.
+let i = 0
+i++
+console.log(i);
+
+2.
+let i = 0
+i = i + 1
+console.log(i);
+
+3.
+let i = 0
+i += 1
+console.log(i);
+
+========= ITERATION =========
+
+Pengulangan, banyak dipakai untuk memproses logika yang memerlukan data yang banyak,
+Cara untuk melakukan iteration di dalam javascript, ada 2 cara:
+
+1. WHILE
+2. FOR
+
+1. WHILE
+let i = 0
+while (i < 5) {
+  console.log(i);
+  i++
+}
+
+2. FOR
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+
+========= BREAK, dan CONTINUE dalam LOOPING ===========
+
+BREAK berfungsi untuk memaksa keluar dari iteration itu sendiri
+for (let i = 10; i > 0; i--) {
+  if (i == 5) break
+  console.log(i);
+}
+
+CONTINUE berfungsi untuk skip line dalam scope di bawahnya
+for (let i = 10; i > 0; i--) {
+  if (i == 5) continue
+  console.log(i);
+}
+
+========= CASE 1 =========
+
+MEMBUAT PROGRAM UNTUK MENDETEKSI BILANGAN GANJIL DAN GENAP KURANG DARI 20 LEBIH DARI 0
+
+let i = 1
+while (i < 20) { 
+  if (i % 2 == 0) {
+    console.log(`${i} merupakan bilangan genap`);
+  } else if (i % 2 == 1) {
+    console.log(`${i} merupakan bilangan ganjil`);
+  }
+  i++
+}
+
+// MELEWATI 2 FASE CONDITION
+// 1. WHILE
+// 2. IF
+
+========= CASE 2 =========
+
+MEMBUAT PROGRAM UNTUK MEMBALIKAN KATA
+
+let kata = "jerapah"; // haparej
+
+let kataTerbalik = ""
+for (let i = kata.length - 1; i >= 0; i--) {
+  kataTerbalik = kataTerbalik + kata[i]
+}
+console.log(kataTerbalik);
